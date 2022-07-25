@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "discord-remote-auth"
+version = "1.0.0"
+description = "Wrapper around discord's remote auth gateway"
+authors = ["teaishealthy <teaishealthy@protonmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+cryptography = "^37.0.4"
+aiohttp = "^3.8.1"
+pre-commit = "^2.20.0"
+sphinxcontrib-trio = "^1.1.2"
+
+[tool.poetry.dev-dependencies]
+pyright = "^1.1.263"
+black = "^22.6.0"
+isort = "^5.10.1"
+furo = "^2022.6.21"
+
+[tool.isort]
+profile = "black"
+src_paths = "discord_remote_auth"
+
+[tool.pyright]
+typeCheckingMode = "strict"
+reportUnnecessaryTypeIgnoreComment = true
+
+[tool.black]
+line-length = 88
+include = "discord_remote_auth"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
