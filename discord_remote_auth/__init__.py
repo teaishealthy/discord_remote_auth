@@ -38,7 +38,7 @@ __all__ = (
     "RemoteAuth",
 )
 
-logger = logging.getLogger("discord-remote-auth-kit")
+logger = logging.getLogger("discord_remote_auth")
 Coro = TypeVar("Coro", bound=Callable[..., Coroutine[Any, Any, Any]])
 HEADERS = {
     "Origin": "https://discord.com",
