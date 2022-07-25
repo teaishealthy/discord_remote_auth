@@ -10,13 +10,17 @@ python = "^3.8"
 cryptography = "^37.0.4"
 aiohttp = "^3.8.1"
 pre-commit = "^2.20.0"
-sphinxcontrib-trio = "^1.1.2"
+
+sphinxcontrib-trio = { version = "^1.1.2", optional = true}
+furo = { version = "^2022.6.21", optional = true}
 
 [tool.poetry.dev-dependencies]
 pyright = "^1.1.263"
 black = "^22.6.0"
 isort = "^5.10.1"
-furo = "^2022.6.21"
+
+[tool.poetry.extras]
+docs = ["furo", "sphinxcontrib-trio"]
 
 [tool.isort]
 profile = "black"
