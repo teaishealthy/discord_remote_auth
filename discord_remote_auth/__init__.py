@@ -110,7 +110,7 @@ class RemoteAuth:
             self._got_heartbeat_ack = True
 
     def hello(self, coroutine: Coro) -> Coro:
-        """Hi ooliver"""
+        """Register an coroutine for the `hello` event handler"""
         self._register("hello", coroutine)
         return coroutine
 
